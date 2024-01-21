@@ -34,6 +34,8 @@
 
             <li><a href="<?=BASE_URL?>/">Ver productos</a></li> 
             <li><a href="<?=BASE_URL?>categoria/obtenerCategoriasyProductos/1">Categorias</a></li> 
+            <li><a href="<?=BASE_URL?>pedido/mostrarPedidosUsuario/">Ver mis pedidos</a></li> 
+            
             <li><a href="<?=BASE_URL?>carrito/mostrarCarrito/">Ver Carrito</a></li> 
             <hr>
             <li><a href="<?=BASE_URL?>usuario/logout/">Cerrar Sesión</a></li> 

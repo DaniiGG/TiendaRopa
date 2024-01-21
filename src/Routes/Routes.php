@@ -126,6 +126,9 @@ class Routes
             return (new PedidoController())->mostrarFormulario($id);
         });
 
+        Router::add('GET','pedido/mostrarPedidosUsuario/',function (){
+            return (new PedidoController())->mostrarPedidosUsuario();
+        });
       
 
         Router::add('POST','pedido/guardarPedido/',function (){
@@ -141,6 +144,7 @@ class Routes
             return (new lineasPedidoController())->enviarCorreo();
         });
 
+        
 
 
 

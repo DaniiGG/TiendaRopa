@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
-    <style>
-       
-        .section-carrito{
-            display: flex;
-            flex-wrap: wrap;
-        }
-    </style>
-    
+    <style>.section-carrito{display: flex;flex-wrap: wrap;} .pantalla-compra{margin-left:250px; margin-top:100px}</style>
 </head>
 <body>
 <?php use Utils\Utils; ?>
@@ -72,7 +65,7 @@ $totalPrecio = 0;
                 <p>El carrito está vacío</p>
             <?php endif; ?>
         </div>
-        <div>
+        <div class="pantalla-compra">
             <?php if(isset($_SESSION['pedido_added']) && $_SESSION['pedido_added'] == 'complete'): ?> 
                     <?php if (!empty($productosEnCarrito)) : ?>
                         <form action="<?= BASE_URL ?>pedido/mostrarRecibo" method="post">

@@ -106,4 +106,25 @@ class PedidoController {
             echo "Error: El carrito está vacío";
         }
     }
+
+    public function mostrarPedidosUsuario(): void {
+        // Verifica si el usuario ha iniciado sesión y obtén su ID
+        if (isset($_SESSION['identity'])) {
+            $usuario_id = $_SESSION['identity']->id;
+        } else {
+            // Si no ha iniciado sesión, redirige a la página de inicio de sesión o muestra un mensaje de error
+            header("Location: " . BASE_URL . "usuario/login/");
+            exit;
+        }
+
+        // Crea un objeto Pedido
+        $pedido = new Pedido();
+
+        // Obtiene los pedidos del usuario
+        $pedidos = $pedido->getPedidosByUsuarioId($usuario_id);
+
+        // Puedes cargar una vista con los pedidos aquí, pasando la lista de pedidos como variable
+        $this->pages->render('pedido/mostrarPedidos', ['pedidos' => $pedidos]);
+    }
+
 }

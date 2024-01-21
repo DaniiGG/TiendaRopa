@@ -145,5 +145,30 @@ class Pedido{
     }
 
 
+	public function getPedidosByUsuarioId(string $usuario_id): array {
+        try {
+            // Prepara la consulta SQL para obtener los pedidos de un usuario
+            $consulta = $this->db->prepare("SELECT * FROM pedidos WHERE usuario_id = :usuario_id");
+            
+            // Vincula el parámetro
+            $consulta->bindValue(':usuario_id', $usuario_id);
+            
+            // Ejecuta la consulta
+            $consulta->execute();
+            
+            // Obtiene todos los resultados como un array asociativo
+            $pedidos = $consulta->fetchAll(PDO::FETCH_ASSOC);
+            
+            return $pedidos;
+        } catch (PDOException $e) {
+            // Manejo de excepciones: Puedes realizar acciones aquí si ocurre un error en la consulta
+            // Por ejemplo, puedes imprimir el error con: echo $e->getMessage();
+            return []; // En caso de error, devuelve un array vacío
+        } finally {
+            $this->desconecta();
+        }
+    }
+
+
 
 }
