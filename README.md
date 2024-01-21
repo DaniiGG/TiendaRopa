@@ -83,3 +83,10 @@ INSERT INTO productos (categoria_id, nombre, descripcion, precio, stock, oferta,
 (1, 'Camisa', 'Camisa muy bonita', 30, 30, 'no', '2024-01-21', 'img/61L7JvSMYlL._AC_UY1000_.jpg'),
 (2, 'Pantalón', 'Pantalón de algodón con diseño moderno', 29, 25, 'NO', '2024-01-21', 'img/spa_pl_Pantalon-grueso-de-chandal-cargo-para-hombre-negro-Bolf-JX9395A-89767_7.jpg'),
 (3, 'Zapatillas deporte', 'Zapatillas de alto rendimiento para running', 129, 30, 'No', '2024-01-21', 'img/319088057_830885034831807_3100388459411120041_n-1.jpg');
+
+INSERT INTO pedidos (usuario_id, provincia, localidad, direccion, coste, estado, fecha, hora)
+VALUES (1, 'Provincia Ejemplo', 'Localidad Ejemplo', 'Dirección Ejemplo', 50.99, 'Pendiente', '2024-01-21', '12:30:00');
+
+
+INSERT INTO lineas_pedidos (pedido_id, producto_id, unidades)
+VALUES (1, 1, 2);
