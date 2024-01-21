@@ -59,21 +59,18 @@ CREATE TABLE IF NOT EXISTS lineas_pedidos(
     producto_id int(255) not null,
     unidades int(255) not null,
     CONSTRAINT pk_lineas_pedidos PRIMARY KEY(id),
-    CONSTRAINT fk_linea_pedido FOREIGN KEY(pedido_id) REFERENCES pedidos(id)
+    CONSTRAINT fk_linea_pedido FOREIGN KEY(pedido_id) REFERENCES pedidos(id),
+    
 ) ENGINE=InnoDb DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Usuarios Table
 
 INSERT INTO usuarios (nombre, apellidos, email, pass, rol)
 VALUES 
     ('Admin', 'Perez', 'admin@gmail.com', '$2y$04$GRztoMIyveHDlDcOI78UL.wd8YoV/kzDf.Yl1v6kVD.FBRirFXqpi', 'admin'), -- contraseña: admin123
     ('Maria', 'Gomez', 'user@gmail.com', '$2y$04$oIsVKwzT2df0b.caOiXyV.so/.eBqpcOmH.FwGzxfxDDI2Qiwc4qa', 'user'); -- contraseña: user123
 
--- Categorias Table
-
 INSERT INTO categorias (nombre) VALUES ('Camisas'), ('Pantalones'), ('Zapatillas');
 
--- Productos Table
 
 INSERT INTO productos (categoria_id, nombre, descripcion, precio, stock, oferta, fecha, imagen)
 VALUES 
@@ -81,12 +78,10 @@ VALUES
     (2, 'Pantalón', 'Pantalón de algodón con diseño moderno', 29, 25, 'NO', '2024-01-21', 'img/spa_pl_Pantalon-grueso-de-chandal-cargo-para-hombre-negro-Bolf-JX9395A-89767_7.jpg'),
     (3, 'Zapatillas deporte', 'Zapatillas de alto rendimiento para running', 129, 30, 'No', '2024-01-21', 'img/319088057_830885034831807_3100388459411120041_n-1.jpg');
 
--- Pedidos Table
 
 INSERT INTO pedidos (usuario_id, provincia, localidad, direccion, coste, estado, fecha, hora)
 VALUES (1, 'Provincia Ejemplo', 'Localidad Ejemplo', 'Dirección Ejemplo', 50.99, 'Pendiente', '2024-01-21', '12:30:00');
 
--- Lineas_pedidos Table
 
 INSERT INTO lineas_pedidos (pedido_id, producto_id, unidades)
 VALUES (1, 1, 2);
