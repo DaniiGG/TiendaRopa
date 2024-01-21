@@ -6,6 +6,7 @@
     <title>Document</title>
     <style>
      .listacategorias {
+        text-align: center;
     list-style: none;
     padding: 0;
     margin: 0;
