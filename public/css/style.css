@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0ffff;
+    margin: 0;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"], input[type="password"],input[type="email"], input[type="pass"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bolder; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+input[type="submit"]:hover {
+    color:#007bff;
+    background-color: white;
+    border:1px solid #007bff;
+}
+.alert_green {
+    color: #155724;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.alert_red {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+a:visited{
+    color: black;
+}
+a:link{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+.categorias {
+    padding: 10px;
+    border-radius: 7px;
+}
+
+
+.categorias:hover{
+background-color: rgb(224, 224, 224);
+}
+
+a:active{
+    text-decoration: underline;
+}
+
+.admin:visited{
+    color: rgb(125, 76, 252);
+}
+.admin:link{
+    color: rgb(125, 76, 252);
+}
+
+
+.añadir{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: rgb(141, 141, 243);
+}
+.añadir:visited{
+    color: rgb(254, 254, 254);
+}
+.añadir:link{
+    color: rgb(255, 255, 255);
+}
+.añadir:hover{
+    background-color: rgb(117, 117, 243);;
+}
+
+#productos li:nth-child(5){
+    margin-top: 20px;
+}
+
+strong{
+    margin-left: 40vw;
+}
+
+#productos-mostrar{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#productos {
+list-style: none;
+padding: 0;
+margin: 0;
+text-align: center;
+}
+#productos li{
+margin: 10px;
+}
+
+img{
+border: solid black;
+border-radius: 10px;
+width: 250px;
+height: 300px;
+}
